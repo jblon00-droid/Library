@@ -6,6 +6,7 @@
     <title>Library</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <section id="landing">
@@ -23,14 +24,36 @@
                         <a href="#" class="nav__link nav__link--primary">Books</a>
                     </li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#featured" class="menu__link" onclick="closeMenu()">Books</a>
+                        </li>
+                        <li class="menu__list">
+                            <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
+
         <header>
             <div class="header__container">
                 <div class="header__description">
                     <h1>America's most awarded online library platform</h1>
                     <h2>Find your dream book with <span class="purple">Library</span></h2>
-                    <button class="btn">Browse Books</button>
+                    <a href="#featured">
+                        <button class="btn">Browse Books</button>
+                    </a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="FES-assets/Undraw_Books.svg" alt="picture of girl reading">
@@ -333,20 +356,41 @@
                 </div>
             </div>
         </section>
+
         <section id="Explore">
                 <div class="Explore__container">
                     <div class="row row__column">
                         <h2 class="section__title">Explore More <span class="purple">Books</span>
                         </h2>
-                        <button class="btn">Browse Books</button>
+                        <a href="#featured">
+                            <button class="btn">Browse Books</button>
+                        </a>
                     </div>
                 </div>
         </section>
-        <footer>
-            
-        </footer>
-
     </main>
-    
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__row">
+                <a href="#"></a>
+                <figure class="footer__logo--img">
+                    <img class="logo" src="./FES-assets/Library.svg" class="footer__logo--img" alt="">
+                </figure>
+            </div>
+            <div class="footer__links">
+                <ul>
+                    <li><a href="#" class="footer__link">Home</a></li>
+                    <li><a href="" class="footer__link no-cursor">About</a></li>
+                    <li><a href="#featured" class="footer__link">Books</a></li>
+                    <li><a href="" class="footer__link no-cursor">Contact</a></li>
+                </ul>
+                <div class="footer__copyright">
+                    &copy; 2024 Library. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
